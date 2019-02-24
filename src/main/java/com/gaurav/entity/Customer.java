@@ -21,6 +21,7 @@ public class Customer {
     private String firstName;
     private String lastName;
 
+
     @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     @JoinColumn(name = "CUSTOMER_DETAILS_ID")
     @Fetch(FetchMode.JOIN)
@@ -36,4 +37,5 @@ public class Customer {
         this.lastName = lastName;
         this.customerDetails = customerDetails;
     }
+
 }

@@ -21,8 +21,11 @@ public class Client {
             session.beginTransaction();
 
             session.save(new Customer("Zack", "Anderson",
-                    new CustomerDetails(22L, Gender.MALE, "London")));
+
+            new CustomerDetails(22L, Gender.MALE, "London")));
+
             session.save(new Customer("Becky", "Smith",
+
                     new CustomerDetails(28L, Gender.FEMALE, "Los Angeles")));
 
            /*
