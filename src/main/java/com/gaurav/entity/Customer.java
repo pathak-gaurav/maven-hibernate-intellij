@@ -3,6 +3,8 @@ package com.gaurav.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
 
@@ -19,8 +21,9 @@ public class Customer {
     private String firstName;
     private String lastName;
 
-    @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     @JoinColumn(name = "CUSTOMER_DETAILS_ID")
+    @Fetch(FetchMode.JOIN)
     private CustomerDetails customerDetails;
 
     public Customer(String firstName, String lastName) {

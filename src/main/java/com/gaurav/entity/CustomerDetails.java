@@ -38,4 +38,14 @@ public class CustomerDetails {
         this.gender = gender;
         this.location = location;
     }
+
+    @Override
+    public String toString() {
+        return "CustomerDetails{" +
+                "customerDetailsId=" + customerDetailsId +
+                ", age=" + age +
+                ", gender=" + gender +
+                ", location='" + location + '\'' +
+                '}';
+    }
 }
