@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@127.0.0.1:1521:XE</property>
+        <property name="hibernate.connection.autocommit">false</property>
+        <property name="hibernate.connection.username">SYSADM</property>
+        <property name="hibernate.connection.password">SYSADM</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+        <!--
+        <property name="hibernate.connection.CharSet" value="utf8"/>
+        <property name="hibernate.connection.characterEncoding" value="utf8"/>
+        <property name="hibernate.connection.useUnicode" value="true"/>
+        -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        <!-- use encache provider-->
+        <!--<property name="hibernate.cache.region.factory_class"-->
+        <!--value="org.hibernate.cache.ehcache.EhCacheRegionFactory"/>-->
+        <!--<property name="hibernate.javax.cache.provider" value="org.ehcache.jsr107.EhcacheCachingProvider"/>-->
+        <!--&lt;!&ndash;use second level cache&ndash;&gt;-->
+        <!--<property name="hibernate.cache.use_second_level_cache" value="true"/>-->
+        <!--&lt;!&ndash;use 3rd level cache&ndash;&gt;-->
+        <!--<property name="hibernate.cache.use_query_cache" value="true"/>-->
+    </session-factory>
+</hibernate-configuration>
