@@ -19,10 +19,18 @@ public class Customer {
     private String firstName;
     private String lastName;
 
+    @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @JoinColumn(name = "CUSTOMER_DETAILS_ID")
+    private CustomerDetails customerDetails;
+
     public Customer(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
-
+    public Customer(String firstName, String lastName, CustomerDetails customerDetails) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.customerDetails = customerDetails;
+    }
 }
